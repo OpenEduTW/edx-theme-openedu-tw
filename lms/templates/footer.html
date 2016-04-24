@@ -9,30 +9,54 @@
 
 <div class="wrapper wrapper-footer">
   <footer id="footer-openedx">
+
     <div class="colophon">
       <nav class="nav-colophon">
         <ol>
-          <li><a href="${reverse('about')}">關於</a></li>
+          <li><a href="https://openedu.gitbooks.io/manual/content/qa/qa.html" target="_blank">常見問題</a></li>
+          <li><a href="https://openedu.gitbooks.io/manual/content/lms/student.html" target="_blank">如何修課</a></li>
+          <li><a href="https://openedu.gitbooks.io/manual/content/teacher/teacher.html" target="_blank">如何開課</a></li>
+          <li><a href="https://openedu.gitbooks.io/manual/content/index.html" target="_blank">操作手冊</a></li>
+          <li><a href="https://www.openedu.tw/contact.jsp" target="_blank">聯絡我們</a></li>
+          <li><a href="http://copeneduc.org" target="_blank">關於中華開放教育聯盟</a></li>
         </ol>
       </nav>
 
+      <div class="wrapper-logo">
+        <p>
+          <a href="/dashboard">
+            <img alt="Open Edu Logo" src="${static.url('images/logo.png')}">
+          </a>
+        </p>
+      </div>
+
       <p class="copyright">© 2016 Open Edu 中華開放教育平台，保留部分權利</p>
-        <nav class="nav-legal">
-          <ul>
-            <li class="nav-legal-01">
-              <a href="${reverse('tos')}#privacy">隱私權保護與資訊安全政策</a>
-            </li>
-            <li class="nav-legal-01">
-              <a href="${reverse('tos')}">服務條款</a>
-            </li>
-          </ul>
-        </nav>
+      <nav class="nav-legal">
+        <ul>
+          <li class="nav-legal-01">
+            <a href="https://www.openedu.tw/privacy.jsp">隱私權保護與資訊安全政策</a>
+          </li>
+          <li class="nav-legal-02">
+            <a href="https://www.openedu.tw/tos.jsp">服務條款</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div style="text-align: center;">
+      <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fopenedu.tw%2F&tabs&width=340&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=871146829598893" width="340" height="214" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+    </div>
+
+    <div class="references">
+      <a href="https://play.google.com/store/apps/details?id=tw.openedu.android" target="_blank">
+        <img src="//www.openedu.tw/img/Android-app-on-google-play.svg.png" width="115" height="40" alt="Open Edu Mobile Apps for Android">
+			</a>
     </div>
 
     <div class="powered-by">
       <p>
         <a href="http://openedx.org/">
-          <img src="https://s3.amazonaws.com/files.edx.org/openedx-logos/edx-openedx-logo-tag.png" alt="Powered by Open edX" width="150" height="50" />
+          <img src="https://files.edx.org/openedx-logos/edx-openedx-logo-tag-light.png" alt="Powered by Open edX" width="150" height="50" />
         </a>
       </p>
     </div>
