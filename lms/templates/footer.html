@@ -3,13 +3,13 @@
   from django.core.urlresolvers import reverse
   from django.utils.translation import ugettext as _
   from branding.api import get_footer
+  from openedx.core.djangoapps.lang_pref.api import footer_language_selector_is_enabled
 %>
 <% footer = get_footer(is_secure=is_secure) %>
 <%namespace name='static' file='static_content.html'/>
 
 <div class="wrapper wrapper-footer">
   <footer id="footer-openedx">
-
     <div class="colophon">
       <nav class="nav-colophon">
         <ol>
@@ -20,6 +20,10 @@
         </ol>
       </nav>
 
+      % if context.get('include_language_selector', footer_language_selector_is_enabled()):
+          <%include file="${static.get_template_path('widgets/footer-language-selector.html')}"/>
+      % endif
+
       <div class="wrapper-logo">
         <p>
           <a href="/dashboard">
@@ -28,7 +32,7 @@
         </p>
       </div>
 
-      <p class="copyright">© 2015 - 2017 中華開放教育平台，保留部分權利</p>
+      <p class="copyright">© 2015 - 2018 中華開放教育平台，保留部分權利</p>
       <nav class="nav-legal">
         <ul>
           <li class="nav-legal-01">
