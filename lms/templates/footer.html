@@ -12,34 +12,20 @@
 % if uses_bootstrap:
   <div class="container-fluid wrapper-footer">
     <footer>
-      <div class="row">
-        <div class="col-md-3">
-          <nav class="navbar site-nav navbar-expand-sm" aria-label="About 關於我們">
-            <p>
-              <a href="/dashboard">
-                <img alt="OpenEdu Logo" src="${static.url('images/logo.png')}">
-              </a>
-            </p>
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a href="https://copeneduc.org" target="_blank">COEC 社團法人中華開放教育聯盟</a>
-              </li>
-            </ul>
-            % if not hide_openedx_link:
-              <div class="footer-about-openedx">
-                <p>
-                  <a href="http://openedx.org/">
-                    <img src="https://files.edx.org/openedx-logos/edx-openedx-logo-tag-light.png" alt="Powered by Open edX" width="150" height="50" />
-                  </a>
-                </p>
-              </div>
-            % endif
-          </nav>
-        </div>
-        <div class="col-md-3">
-          <nav class="navbar site-nav navbar-expand-sm" aria-label="Help 相關資訊">
-            <ul class="navbar-nav">
-              <li class="nav-item">
+      <div class="row main-row">
+        <div class="col-md-9">
+          <div class="row full-height">
+            <div class="col-md-4 column-2 flex-column column-styles">
+              <h3 class="heading">About 關於我們</h3>
+              <ul class="list-unstyled clear-margins">
+                <li>
+                  <a href="https://copeneduc.org" target="_blank">COEC 社團法人中華開放教育聯盟</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-4 column-2 flex-column column-styles">
+              <h3 class="heading">Help 相關資訊</h3>
+              <ul class="list-unstyled clear-margins">
                 <li>
                   <a href="https://docs.google.com/document/d/1qlHKZHGG6EHlKbMxnwTC6fXzt7oQSbW058cgfjh57N0/edit?usp=sharing" target="_blank">Manual 操作手冊</a>
                 </li>
@@ -53,29 +39,45 @@
                   <a href="https://www.openedu.tw/privacy.jsp">Privacy 隱私權保護與資訊安全政策</a>
                 </li>
                 <li>
-                  <a href="https://www.openedu.tw/privacy.jsp">Privacy 隱私權保護與資訊安全政策</a>
+                  <a href="https://www.openedu.tw/tos.jsp">TOS 服務條款</a>
                 </li>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div class="col-md-3">
-          <nav class="navbar site-nav navbar-expand-sm" aria-label="About 關於我們">
-            <div class="references">
-              <a href="https://play.google.com/store/apps/details?id=tw.openedu.android" target="_blank">
-                <img src="//www.openedu.tw/img/google_play_badge.png" alt="OpenEdu Mobile Apps for Android" width="115" height="40">
-              </a>
-              <a href="https://itunes.apple.com/tw/app/zhong-hua-kai-fang-jiao-yu/id1146681127?l=zh&mt=8" target="_blank">
-                <img src="//www.openedu.tw/img/app_store_icon.png" alt="OpenEdu Mobile Apps for iOS" width="115" height="40">
-              </a>
+              </ul>
             </div>
-            <p class="copyright">© 2015 - 2018 OpenEdu 中華開放教育平台。Some Rights Reserved 保留部分權利</p>
-          </nav>
+            <div class="col-md-4 column-2 flex-column column-styles">
+              <p>
+                <a href="/dashboard">
+                  <img alt="OpenEdu Logo" src="${static.url('images/logo.png')}">
+                </a>
+              </p>
+              <div class="references">
+                <a href="https://play.google.com/store/apps/details?id=tw.openedu.android" target="_blank">
+                  <img src="//www.openedu.tw/img/google_play_badge.png" alt="OpenEdu Mobile Apps for Android" width="115" height="40">
+                </a>
+                <a href="https://itunes.apple.com/tw/app/zhong-hua-kai-fang-jiao-yu/id1146681127?l=zh&mt=8" target="_blank">
+                  <img src="//www.openedu.tw/img/app_store_icon.png" alt="OpenEdu Mobile Apps for iOS" width="115" height="40">
+                </a>
+              </div>
+              % if not hide_openedx_link:
+                <div class="footer-about-openedx">
+                  <p>
+                    <a href="http://openedx.org/">
+                      <img src="https://files.edx.org/openedx-logos/edx-openedx-logo-tag-light.png" alt="Powered by Open edX" width="150" height="50" />
+                    </a>
+                  </p>
+                </div>
+              % endif
+            </div>
+          </div>
         </div>
         <div class="col-md-3">
           <div style="text-align: center;">
             <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fopenedu.tw%2F&tabs&width=340&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=871146829598893" width="340" height="214" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
           </div>
+        </div>
+      </div>
+      <div class="row main-row">
+        <div class="col-md-12">
+          <p class="text-muted">© 2015 - 2018 OpenEdu 中華開放教育平台。Some Rights Reserved 保留部分權利</p>
         </div>
       </div>
     </footer>
@@ -112,7 +114,7 @@
               <a href="https://www.openedu.tw/privacy.jsp">Privacy 隱私權保護與資訊安全政策</a>
             </li>
             <li class="nav-legal-02">
-              c
+              <a href="https://www.openedu.tw/tos.jsp">TOS 服務條款</a>
             </li>
           </ul>
         </nav>
